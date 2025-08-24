@@ -1,0 +1,25 @@
+# Groovify - Music Analytics Dashboard
+# Requirements for production deployment
+
+# Core framework
+streamlit>=1.33.0,<2.0.0
+
+# Data processing and analysis
+pandas>=2.2.0,<3.0.0
+numpy>=1.24.0,<2.0.0
+
+# Database connectivity
+psycopg2-binary>=2.9.7,<3.0.0
+SQLAlchemy>=2.0.0,<3.0.0
+
+# Data visualization
+plotly>=5.17.0,<6.0.0
+
+# UI components (optional)
+streamlit-option-menu>=0.3.6,<1.0.0
+
+# Development dependencies (uncomment for dev environment)
+# pytest>=7.0.0
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.0.0

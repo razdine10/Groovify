@@ -1,0 +1,217 @@
+.finance-container {
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+}
+
+.finance-header {
+    background: linear-gradient(135deg, #6D28D9 0%, #8B5CF6 50%, #A78BFA 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(109, 40, 217, 0.2);
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin: 0.5rem 0 0 0;
+}
+
+.finance-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+    margin: 1rem 0;
+    transition: transform 0.2s ease;
+}
+
+.finance-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.metric-row {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.metric-item {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    border: 1px solid #cbd5e1;
+    border-radius: 15px;
+    padding: 0.8rem;
+    text-align: center;
+    transition: all 0.2s ease;
+    min-height: 80px;
+    min-width: 120px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.metric-item:hover {
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+    transform: scale(1.02);
+}
+
+.metric-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #6D28D9;
+    margin: 0.2rem 0;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.metric-icon {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    opacity: 0.8;
+}
+
+.country-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid #f1f5f9;
+    transition: background-color 0.2s ease;
+}
+
+.country-item:hover {
+    background-color: #f8fafc;
+}
+
+.country-name {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.country-value {
+    font-weight: 600;
+    color: #6D28D9;
+}
+
+.sidebar-finance {
+    background: linear-gradient(135deg, #6D28D9, #8B5CF6);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.trend-positive {
+    color: #6D28D9;
+    font-weight: 600;
+}
+
+.trend-negative {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+.invoice-status {
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.status-high {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-medium {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-low {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.auto-scroll-container {
+    height: 700px;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #fafafa;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+.auto-scroll-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.auto-scroll-container::-webkit-scrollbar-track {
+    background: #f7fafc;
+    border-radius: 3px;
+}
+
+.auto-scroll-container::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 3px;
+}
+
+.auto-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+.auto-scroll-content {
+    animation: autoScroll 25s linear infinite;
+    padding: 10px;
+}
+
+@keyframes autoScroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+.auto-scroll-container:hover .auto-scroll-content {
+    animation-play-state: paused;
+}
+
+.auto-scroll-container:active .auto-scroll-content {
+    animation-play-state: paused;
+} 

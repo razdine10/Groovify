@@ -1,0 +1,329 @@
+/* Employee Analytics Dashboard Styles */
+
+/* Header styles (reusing finance header) */
+.finance-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0 0;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Segmented control and radio button alignment */
+div[data-testid="stSegmentedControl"] { 
+    display: flex; 
+    justify-content: flex-start; 
+}
+
+div[data-testid="stSegmentedControl"] > div { 
+    gap: 0 !important; 
+}
+
+div[role="radiogroup"] { 
+    display: flex !important; 
+    justify-content: flex-start !important; 
+    gap: 0 !important; 
+}
+
+div[role="radiogroup"] label { 
+    margin: 0 !important; 
+}
+
+/* Employee-specific styling */
+.employee-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #667eea;
+    margin: 1rem 0;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.employee-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+.performance-badge {
+    display: inline-block;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.role-tag {
+    display: inline-block;
+    background: #e9ecef;
+    color: #495057;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin: 0.2rem;
+    border: 1px solid #ced4da;
+    font-weight: 500;
+}
+
+/* Employee metrics styling */
+.employee-metric {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    border-left: 5px solid #667eea;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.employee-metric::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.employee-metric:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.metric-value {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.metric-label {
+    color: #6c757d;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+
+/* Team hierarchy styling */
+.hierarchy-item {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    position: relative;
+}
+
+.manager-item {
+    background: linear-gradient(145deg, #667eea, #764ba2);
+    color: white;
+    font-weight: bold;
+}
+
+.manager-item .role-tag {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.report-item {
+    margin-left: 2rem;
+    border-left: 3px solid #667eea;
+    padding-left: 1rem;
+}
+
+/* Performance indicators */
+.performance-high {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.performance-medium {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.performance-low {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Territory analysis styling */
+.territory-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin: 0.8rem 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.country-header {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #667eea;
+}
+
+/* Productivity indicators */
+.productivity-high {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.productivity-medium {
+    background: linear-gradient(45deg, #ffc107, #fd7e14);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.productivity-low {
+    background: linear-gradient(45deg, #dc3545, #e83e8c);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Chart container styling */
+.chart-container {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin: 1.2rem 0;
+    border: 1px solid #e9ecef;
+}
+
+/* Table styling */
+.stDataFrame {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border: 1px solid #e9ecef;
+}
+
+.stDataFrame thead th {
+    background: linear-gradient(90deg, #667eea, #764ba2) !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+/* Employee status indicators */
+.status-active {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #28a745;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.status-inactive {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #dc3545;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+/* Custom scrollbar */
+.employee-content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.employee-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.employee-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 10px;
+}
+
+.employee-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #5a6fd8, #6c5b93);
+}
+
+/* Animation effects */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2rem;
+    }
+    
+    .header-subtitle {
+        font-size: 1rem;
+    }
+    
+    .employee-metric {
+        padding: 1.2rem;
+    }
+    
+    .metric-value {
+        font-size: 1.8rem;
+    }
+    
+    .employee-card {
+        padding: 1rem;
+    }
+} 
