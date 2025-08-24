@@ -1,7 +1,3 @@
-"""
-Visualization functions for customer analysis module
-"""
-
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -136,7 +132,7 @@ def create_cluster_heatmap(rfm_df):
         hoverlabel=dict(
             bgcolor=HOVER_BG_COLOR, bordercolor=HOVER_BORDER_COLOR,
             font_size=HOVER_FONT_SIZE,
-        ),
+        )
     )
     return fig
 
@@ -166,7 +162,7 @@ def create_scatter_plot(rfm_df):
         hoverlabel=dict(
             bgcolor=HOVER_BG_COLOR, bordercolor=HOVER_BORDER_COLOR,
             font_size=HOVER_FONT_SIZE,
-        ),
+        )
     )
     return fig
 
@@ -198,7 +194,7 @@ def create_churn_histogram(churn_df):
     """Create histogram of days since last order."""
     fig = px.histogram(
         churn_df,
-        x="days_since_last",
+        x="days_since_last_purchase",
         nbins=20,
         title="Distribution - Days Since Last Order",
         color="churn_status",
